@@ -56,7 +56,7 @@ export default function addNote() {
 
   const loadTags = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/tag');
+      const response = await axios.get(`${BASE_URL}/tag`);
       setTags(response.data.data).then(() => {});
     } catch (error) {
       console.error(error);
